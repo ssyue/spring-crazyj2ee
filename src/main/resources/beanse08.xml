@@ -8,5 +8,5 @@
     <bean id="chinese" class="ch07.se08.service.PersonFactory">
 <!--         <property name="axe" ref="steelAxe" />
  -->    </bean>
-        
+       <bean id="myResourceLoader" class="ch08.se03.app.MyResourceLoader"></bean> 
 </beans>

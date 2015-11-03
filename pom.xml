@@ -24,6 +24,7 @@
 		<struts2.version>2.3.16.3</struts2.version>
 		<hibernate.version>4.3.7.Final</hibernate.version>
 		<springframework.version>4.1.2.RELEASE</springframework.version>
+			<aspectj.version>1.8.5</aspectj.version>
 	</properties>
 
 	<dependencies>
@@ -70,6 +71,16 @@
 		    <artifactId>dom4j</artifactId>
 		    <version>1.6.1</version>
 		</dependency>		 
+		 	<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjrt</artifactId>
+		    <version>${aspectj.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjtools</artifactId>
+		    <version>${aspectj.version}</version>
+		</dependency>
 		 
 		<dependency>
 			<groupId>junit</groupId>
