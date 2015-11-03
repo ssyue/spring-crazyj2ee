@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	
+    <!-- 定义名为chinese的一个对象，它依赖于一个axe对象。spring进行自动装配和注入 -->
+    <bean id="chinese" class="ch07.se08.service.PersonFactory">
+<!--         <property name="axe" ref="steelAxe" />
+ -->    </bean>
+        
+</beans>

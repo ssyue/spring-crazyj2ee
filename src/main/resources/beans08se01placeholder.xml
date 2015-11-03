@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	
+    <!-- PropertyPlaceholderConfigurer是一个容器后处理器，
+        它用来读取property文件，从而可以使用这些属性作为Spring容器的配置数据 -->
+<!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>db.properties</value>
+                如果有多个properties文件，继续列在下面
+            </list>
+        </property>
+    </bean> -->
+    <!-- 使用了context命名空间的话，可以简化上面的配置，利用context:property-placeholder -->
+    <context:property-placeholder location="db.properties"/>
+    
+    <!-- 使用属性文件中配置的属性值 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        destroy-method="close"
+        p:driverClass="${jdbc.driverClass}"
+        p:jdbcUrl="${jdbc.url}"
+        p:user="${jdbc.user}"
+        p:password="${jdbc.password}" />
+    
+</beans>
