@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>1.7</jdk.version>
 		
 		<jetty.version>9.2.5.v20141112</jetty.version>
 		<junit.version>4.11</junit.version>
@@ -145,13 +145,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jms</artifactId>
 			<version>4.1.6.RELEASE</version>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-core</artifactId>
 			<version>5.7.0</version>
 		</dependency>
-		<!-- JMS end -->
 	</dependencies>
 
 	<build>
