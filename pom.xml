@@ -61,7 +61,11 @@
 		    <version>1.0</version>
 		</dependency>
 		 -->
-		 		
+		 		<dependency>
+	        <groupId>org.quartz-scheduler</groupId>
+	        <artifactId>quartz</artifactId>
+	        <version>2.2.1</version>
+        </dependency>
 		<dependency>
 		    <groupId>net.sf.ehcache</groupId>
 		    <artifactId>ehcache</artifactId>
@@ -136,6 +140,18 @@
    			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency> -->
+		<!-- JMS begin -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-core</artifactId>
+			<version>5.7.0</version>
+		</dependency>
+		<!-- JMS end -->
 	</dependencies>
 
 	<build>
