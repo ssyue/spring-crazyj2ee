@@ -7,6 +7,6 @@
     <!-- 定义名为chinese的一个对象，它依赖于一个axe对象。spring进行自动装配和注入 -->
     <bean id="sender" class="jms.Sender">
    </bean>
-            <bean id="receiver" class="jms.Receiver">
+      <bean id="receiver" class="jms.Receiver">
    </bean>
 </beans>
