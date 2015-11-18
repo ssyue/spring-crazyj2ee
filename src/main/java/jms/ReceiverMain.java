@@ -8,6 +8,6 @@ public class ReceiverMain {
         ApplicationContext context=new ClassPathXmlApplicationContext("jms-beans.xml");
         Receiver receiver = (Receiver) context.getBean("receiver");
         Mail mail=receiver.receiveMail();
-        System.out.println("===="+mail.getName()+","+mail.getMail()+","+mail.getWeight());
+        System.out.println("===="+mail.getName()+","+mail.getMail()+",");
     }
 }

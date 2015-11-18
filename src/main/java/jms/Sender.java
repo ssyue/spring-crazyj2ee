@@ -6,6 +6,7 @@ import javax.jms.JMSException;
 import javax.jms.MapMessage;
 import javax.jms.MessageProducer;
 import javax.jms.Session;
+import javax.jms.TextMessage;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
@@ -20,8 +21,8 @@ public class Sender {
             conn=cf.createConnection();
             Session session=conn.createSession(false, Session.AUTO_ACKNOWLEDGE);
             MessageProducer pro=session.createProducer(destination);
-            MapMessage message=session.createMapMessage();
-            message.setString("mailID", mail.getMail());
+      /*      TextMessage message=session.createTextMessage("123456");*/
+           MapMessage message=session.createMapMessage();
             message.setString("name", mail.getName());
             message.setDouble("weight", mail.getWeight());
             pro.send(message);

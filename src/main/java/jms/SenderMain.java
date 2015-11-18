@@ -8,7 +8,6 @@ public class SenderMain {
         ApplicationContext context=new ClassPathXmlApplicationContext("jms-beans.xml");
         Sender sender=(Sender) context.getBean("sender");
         sender.sendMail(new Mail("123456","hello" ,1.10));
-        
     }
 
 }
